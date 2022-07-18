@@ -1,13 +1,22 @@
+@import "colors";
 
+
+
+@mixin location{
+text-align:center; 
+vertical-align: middle;
+display: table-cell;  
+color:$colorF;
+font-size: 1.2rem;
+}
 
 //Global
-* {
-    color: ;
-    font-size: 1.2rem;
+p {
+    @include location;
 }
 
 .container {
-    background-color: ;
+    background-color:$colorB;
     border: 1px solid #000;
     display: flex;
     height: 500px;
@@ -17,21 +26,23 @@
     width: 50%;
 
     .left {
-        background-color: ;
+        background-color:$colorL;
         height: 100%;
         width: 69%;
         position: relative;
+        display: table;
     }
 
     .right {
-        background-color: ;
+        background-color:$colorR;
         height: 100%;
         position: relative;
         width: 29%;
+        display: table;
 
         .button {
-            background-color: ;
-            color: ;
+            background-color:$colorBtn;
+            color:$colorF;
             border: 0;
             border-radius: 10px;
             cursor: pointer;
